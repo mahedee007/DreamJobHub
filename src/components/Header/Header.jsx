@@ -9,8 +9,8 @@ const links = <>
 </>
 
     return (
-        <div className="navbar bg-base-100">
-  <div className="navbar-start">
+        <div className="navbar bg-transparent">
+        <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg
@@ -44,7 +44,7 @@ const links = <>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Start Applying</a>
+    <a className="btn bg-[#7E90FE] text-white">Start Applying</a>
   </div>
 </div>
     );
