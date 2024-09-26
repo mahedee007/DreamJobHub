@@ -1,9 +1,10 @@
 import React from 'react';
 import { IoLocationSharp } from "react-icons/io5";
 import { HiCurrencyDollar } from "react-icons/hi2";
+import { Link } from 'react-router-dom';
 
 const Job = ({job}) => {
-const {logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
+const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
     return (
         <div className='border border-dotted border-[#757575] p-6 rounded-2xl'>
             <img src={logo} alt="" />
@@ -17,7 +18,9 @@ const {logo, job_title, company_name, remote_or_onsite, location, job_type, sala
                 <span className='flex gap-2 items-center text-[#757575]'><IoLocationSharp /> {location}</span>
                 <span className='flex gap-2 items-center text-[#757575]'><HiCurrencyDollar /> {salary}</span>
             </div>
-            <button className="btn bg-[#7E90FE] text-white">View Details</button>
+            <Link to={`/job/${id}`}><button className="btn bg-[#7E90FE] text-white">View Details</button></Link>
+
+            
         </div>
     );
 };
